@@ -4,21 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+
+    <title>UKM Poliwangi</title>
 </head>
 <body>
+    <div id="app">
+        <header class="header_area navbar_fixed">
+            <div class="main_menu">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container">
+                        <a class="navbar-brand text-uppercase text-primary font-weight-bold" href="#">UKM Poliwangi</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                            <li class="nav-item" :class="{active: nav_active}" v-for="nav in navs">
+                                <a class="nav-link" href="#">{{nav}}</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header> <!-- header -->
+        
+        <div class="container">
+            
+            <ul>
+                <li v-for='data in 500'>{{data}}</li>
+            </ul>
+
+            <div class="dropdown-divider m-0"></div>
     
-    <script src="./assets/js/vue.js">
+        </div> <!-- Container -->
+        
+    </div> <!-- App -->
+
     
+    <script src="./src/assets/js/bootstrap.js"></script>
+    <script src="./src/assets/js/jquery.js"></script>
+    <script src="./src/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/assets/js/vue.js"></script>
+    <script>
         var app = new Vue({
             el: '#app',
-            data(){
-                return{
-                    
-                }
+            data: {
+                nav_active: 'home',
+                navs: [
+                    'Home','About','Contact'
+                ],
+            },
+            components: {
+               'VueHeader': {},
+               'VueFooter': {}
             }
         })
-    
     </script>
+
 </body>
 </html>
