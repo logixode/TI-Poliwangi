@@ -8,36 +8,89 @@
     <link rel="stylesheet" href="src/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/assets/css/style.css">
 
-    <title>UKM Poliwangi</title>
+    <title>HMTI Poliwangi</title>
+    
 </head>
 <body>
     <div id="app">
+
         <header class="header_area navbar_fixed">
-            <div class="main_menu">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container">
-                        <a class="navbar-brand text-uppercase text-primary font-weight-bold" href="#">UKM Poliwangi</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                            <li class="nav-item" :class="{active: nav_active}" v-for="nav in navs">
-                                <a class="nav-link" href="#">{{nav}}</a>
+            <div class="nav-stanby">
+                <nav class="navbar navbar-expand-lg navbar-light container">
+                    <a class="navbar-brand text-uppercase text-primary font-weight-bold" href="#">
+                        <!-- <img src="https://pbs.twimg.com/profile_images/791639077510537216/4-UidI2K_400x400.jpg" alt="Logo HMTI" class="img-logo"> -->
+                        <span class="rainbow">HMTI POLIWANGI</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-3 text-up" :class="{active: nav_active}" v-for="nav in navs">
+                                <a class="nav-link font-weight-bold" href="#">{{nav}}</a>
                             </li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </nav>
             </div>
         </header> <!-- header -->
         
-        <div class="container">
+        <div class="text-right position-relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="waves waves-back position-absolute" viewBox="0 0 1440 320">
+                <path style="fill : rgba(230, 231, 233, 0.788)" d="M0,0L60,48C120,96,240,192,360,197.3C480,203,600,117,720,106.7C840,96,960,160,1080,176C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+            </svg>
+        </div>
+        <div class="text-right position-relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="waves position-absolute" viewBox="0 0 1440 320">
+                <linearGradient id="gradient" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#FFEF03"></stop>
+                    <stop offset="100%" stop-color="#FF5A00"></stop>
+                </linearGradient>
+                <path style="fill : url(#gradient)" d="M0,0L60,48C120,96,240,192,360,197.3C480,203,600,117,720,106.7C840,96,960,160,1080,176C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container pt-2">
+
+            <div class="row pt-5 hmti">
+                <div class="col-md-8 hmti py-auto">
+                    <div class="my-5">
+                        <h1 class="display-5 my-2 hello font-weight-bold">HELLO <span class="text-uppercase weare">we are</span></h1>
+                        <h1 class="display-3 my-3 hello font-weight-bold">HMTI POLIWANGI</h1>
+                        <h4 class="display-5 my-3 him hello font-weight-bold text-uppercase">Himpunan Mahasiswa Teknik Informatika</h1>
+                    </div>
+
+                </div>
+                <div class="col-md-4 pt-5">
+                    <img src="src/assets/img/2.png"  height="120%" alt="">
+                </div>
+            </div>
+
+            <!-- <ul>
+                <li v-for='data in 10'>{{data}}</li>
+            </ul> -->
+
+            <div class="doughnut position-absolute"></div>
+
+            <!-- About Us -->
+            <div class="row text-center">
+                <div class="col-md-10 mx-auto">
+                    <div class="my-5">
+                        <h2>About Us</h2>
+                        <h4 class="gray">- The Amazing Team -</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4" v-for="job in jobs">
+                            <img class="rounded-circle dev" src="data:image/png;base64,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" alt="">
+                            <h5 class="mt-3">Rohmad Kurniadi</h5>
+                            <p class="job gray">- {{job}} -</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / About Us -->
             
-            <ul>
-                <li v-for='data in 500'>{{data}}</li>
-            </ul>
 
             <div class="dropdown-divider m-0"></div>
     
@@ -50,21 +103,6 @@
     <script src="./src/assets/js/jquery.js"></script>
     <script src="./src/assets/js/bootstrap.bundle.min.js"></script>
     <script src="./src/assets/js/vue.js"></script>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                nav_active: 'home',
-                navs: [
-                    'Home','About','Contact'
-                ],
-            },
-            components: {
-               'VueHeader': {},
-               'VueFooter': {}
-            }
-        })
-    </script>
-
+    <script src="./src/assets/js/app.js"></script>
 </body>
 </html>
