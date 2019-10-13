@@ -19,7 +19,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light container">
                     <a class="navbar-brand text-uppercase text-primary font-weight-bold" href="#">
                         <!-- <img src="https://pbs.twimg.com/profile_images/791639077510537216/4-UidI2K_400x400.jpg" alt="Logo HMTI" class="img-logo"> -->
-                        <span class="rainbow">HMTI POLIWANGI</span>
+                        <span class="rainbow"><img src="src/assets/img/2.png" v-show="scrolled" width="7%" />TI POLIWANGI</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -54,15 +54,18 @@
         <div class="container pt-2">
 
             <div class="row pt-5 hmti">
-                <div class="col-md-8 hmti py-auto">
-                    <div class="my-5">
-                        <h1 class="display-5 my-2 hello font-weight-bold">HELLO <span class="text-uppercase weare">we are</span></h1>
-                        <h1 class="display-3 my-3 hello font-weight-bold">HMTI POLIWANGI</h1>
-                        <h4 class="display-5 my-3 him hello font-weight-bold text-uppercase">Himpunan Mahasiswa Teknik Informatika</h1>
+                <div class="col-md-7 hmti py-auto">
+                    <div class="my-4">
+                        <h1 class="display-5 my-2 hello font-weight-bold">HELLO <span class="text-uppercase side-text">welcome to</span></h1>
+                        <h1 class="display-3 my-3 hello font-weight-bold">TI POLIWANGI</h1>
+                        <h4 class="display-5 mt-3 him hello font-weight-bold text-uppercase">Generasi XII Teknik Informatika</h1>
                     </div>
 
+                    <a href="http://ti.poliwangi.ac.id">
+                        <button class="primary-btn font-weight-bold px-4">Visit Official Site</button>
+                    </a> 
                 </div>
-                <div class="col-md-4 pt-5">
+                <div class="col-md-5 pt-5">
                     <img src="src/assets/img/2.png"  height="120%" alt="">
                 </div>
             </div>
@@ -71,7 +74,7 @@
                 <li v-for='data in 10'>{{data}}</li>
             </ul> -->
 
-            <div class="doughnut position-absolute"></div>
+            <div class="donut position-absolute"></div>
 
             <!-- About Us -->
             <div class="row text-center">

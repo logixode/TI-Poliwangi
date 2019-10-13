@@ -8,23 +8,24 @@ var app = new Vue({
         jobs: [
             'UI Designer', 'Fullstack Developer', 'UX Developer'
         ],
-        scrollPosition: null
+        scrolled: false
     },
     components: {
        VueHeader: {},
        VueFooter: {}
     },
-    methods: {
-        updateScroll() {
-        this.scrollPosition = window.scrollY
-        }
-    },
 
     mounted() {
-        window.addEventListener('scroll', this.updateScroll);
-        $(document).scroll(function () {
-            var $nav = $(".nav-stanby");
-            $nav.toggleClass('main_menu', $(this).scrollTop() > 70);
+        $(window).scroll(function () {
+            if ($(document).scrollTop() <= 30) {
+                $('.nav-stanby').removeClass('main_menu');
+                app.scrolled = false
+            } else {
+                $('.nav-stanby').addClass('main_menu');
+                app.scrolled = true
+            }
+            // var $nav = $(".nav-stanby")
+            // $nav.toggleClass('main_menu', $(this).scrollTop() > 70)
         });
     }
 })
