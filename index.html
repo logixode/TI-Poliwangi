@@ -16,7 +16,7 @@
 
         <header class="header_area navbar_fixed">
             <div class="nav-stanby">
-                <nav class="navbar navbar-expand-lg navbar-light container">
+                <nav class="navbar navbar-expand-lg navbar-light container" id="main-nav">
                     <a class="navbar-brand text-uppercase text-primary font-weight-bold" href="#">
                         <!-- <img src="https://pbs.twimg.com/profile_images/791639077510537216/4-UidI2K_400x400.jpg" alt="Logo HMTI" class="img-logo"> -->
                         <span class="rainbow"><img src="src/assets/img/2.png" v-show="scrolled" width="7%" />TI POLIWANGI</span>
@@ -28,7 +28,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item mx-3 text-up" :class="{active: nav_active}" v-for="nav in navs">
-                                <a class="nav-link font-weight-bold" href="#">{{nav}}</a>
+                                <a class="nav-link font-weight-bold js-scroll-trigger" :href="'#'+nav">{{nav}}</a>
                             </li>
                         </ul>
                     </div>
@@ -36,7 +36,7 @@
             </div>
         </header> <!-- header -->
         
-        <div class="text-right position-relative">
+        <div class="text-right position-relative" id="Home">
             <svg xmlns="http://www.w3.org/2000/svg" class="waves waves-back position-absolute" viewBox="0 0 1440 320">
                 <path style="fill : rgba(230, 231, 233, 0.788)" d="M0,0L60,48C120,96,240,192,360,197.3C480,203,600,117,720,106.7C840,96,960,160,1080,176C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
             </svg>
@@ -99,7 +99,7 @@
                 </div>
             </div>
             
-            <div class="dropdown-divider m-0"></div>
+            <div class="dropdown-divider m-0" id="About"></div>
             
             <!-- About Us -->
             <div class="row about content-m text-center">
@@ -132,7 +132,7 @@
         
         <!-- Contact Us -->
         <div class="gradient-bar mt-5"></div>
-        <div class="contact py-5 text-white">
+        <div class="contact py-5 text-white" id="Contact">
             <div class="py-5 container">
 
                 <div class="row">
