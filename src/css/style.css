@@ -1,0 +1,254 @@
+body {
+    /* background-image:url('#waves'); */
+    /* background-size:cover; */
+    background-color: #f3f6fa9a !important;
+    overflow-x: hidden;
+}
+
+.header_area.navbar_fixed .nav-stanby {
+    position: fixed;
+    width: 100%;
+    top: -70px;
+    left: 0;
+    right: 0;
+    /* background: #ffffff; */
+    transform: translateY(70px);
+    transition: transform 500ms ease, background 500ms ease;
+    -webkit-transition: transform 500ms ease, background 500ms ease;
+    /* box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1); */
+}
+.header_area {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    background: #ffffff;
+}
+
+.waves {
+    width: 180%;
+    right: -2100px;
+    z-index: -10;
+}
+
+.waves-back {
+    width: 179%;
+    right: -2178px;
+}
+
+#warna {
+    background-color: aqua
+}
+
+.nav-stanby {
+    background-color: transparent;
+    /* height: 80px; */
+}
+
+.nav-stanby .navbar-brand {
+    font-size: 1.50rem !important;
+}
+
+.nav-stanby .navbar .nav-link {
+    color: #fff;
+}
+
+.nav-stanby .navbar .active>.nav-link {
+    color: #fff !important;
+}
+
+.main_menu {
+    background: white;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.main_menu .navbar .nav-link {
+    color: #303030;
+}
+.main_menu .navbar .active>.nav-link {
+    color: #636363 !important;
+}
+
+.main_menu .navbar-brand {
+    font-size: 1.25rem;
+}
+
+.img-logo {
+    width: 7%;
+    height: 7%;
+}
+
+.dev {
+    height: 75%;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.125)!important;
+    vertical-align: middle;
+    position: relative;
+}
+
+.dev:hover {
+    /* margin: 5px 0; */
+    /* vertical-align: middle; */
+    /* height: 72%; */
+    box-shadow: 0 0.7rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.job {
+    font-size: 14px;
+}
+
+.rainbow {
+    background-image: linear-gradient(to right, rgb(255, 153, 0), rgb(255, 217, 3));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* color: rgba(0,0,0,.675) */
+}
+.hello::after {
+    content: '';
+    width: 430px;
+    height: 2px;
+    position: absolute;
+    top: 11%;
+    left: 24%;
+    background: #000000;
+}
+
+.sign {
+    margin-top: 120px;
+}
+
+.ti-po {
+    font-size: 84px !important;
+}
+
+.side-text {
+    font-size: 22px;
+    padding-left: 275px;
+}
+
+.gen {
+    font-size: 24.8px;
+    letter-spacing: 4.3px;
+}
+
+.donut {
+    background: radial-gradient(circle, transparent 60%, rgba(223, 227, 235, 0.527) 40%);
+    border-radius: 100%;
+    height: 600px;
+    width: 600px;
+    margin-left: -655px;
+    z-index: -9;
+}
+
+.donut-center-top {
+    margin-top: -100px;
+    margin-left: 800px;
+}
+
+.donut-center-bottom {
+    margin-top: 850px;
+    margin-left: -300px;
+}
+
+.primary-btn {
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 0px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 46px;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 7px;
+    background-origin: border-box;
+    background-image: linear-gradient(to right, rgb(255, 221, 29) 0%, rgb(253, 148, 61) 100%);
+    border: double 2px transparent;
+    box-shadow: 0px 10px 30px rgba(225, 141, 85, 0.3);
+}
+
+.primary-btn:hover {
+    background-color: transparent !important;
+    background-image: linear-gradient(to right, rgb(255, 153, 0), rgb(255, 217, 3));
+    color: transparent;
+    border: 3px solid rgb(255, 210, 62);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    box-shadow: none;
+
+}
+
+#scene {
+    z-index: -1;
+}
+
+#scene img {
+    margin-top: -50px;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.parallax {
+    background: transparent;
+    min-height: 500px; 
+    margin: 0 -50%;
+}
+
+.hmti-p {
+    box-shadow: 0px 10px 30px rgba(170, 183, 185, 0.4);
+}
+
+.about::before {
+    content: '';
+    width: 430px;
+    height: 20px;
+    position: absolute;
+    /* top: 11%; */
+    /* left: 24%; */
+    background: #000000;
+}
+
+footer {
+    width: 100%;
+    /* padding: 20px; */
+    background-color: #161616;
+}
+
+@media screen and (max-width: 1480px) {
+    .donut {
+        height: 450px;
+        width: 450px;
+        margin-left: -275px;
+        margin-top: -90px;
+    } 
+
+    .sign {
+        margin-top: 50px;
+    }
+
+    .waves {
+        width: 180%;
+        right: -1400px;
+        z-index: -10;
+    }
+    
+    .waves-back {
+        width: 179%;
+        right: -1478px;
+    }
+
+    #scene img {
+        margin-top: -20px;
+        height: 110%;
+        /* height: 100%; */
+    }
+    .hmti {
+        margin-top: -20px;
+        height: 370px;
+    }
+}
+
+/* === EOF === */
