@@ -79,7 +79,7 @@ body {
 }
 
 .dev {
-    height: 75%;
+    height: 200px;
     box-shadow: 0 0.5rem 2rem rgba(0,0,0,.125)!important;
     vertical-align: middle;
     position: relative;
@@ -146,7 +146,7 @@ body {
 }
 
 .donut-center-bottom {
-    margin-top: 850px;
+    margin-top: 900px;
     margin-left: -300px;
 }
 
@@ -178,7 +178,11 @@ body {
     background-clip: text;
 
     box-shadow: none;
+}
 
+a {
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
 #scene {
@@ -201,20 +205,57 @@ body {
     box-shadow: 0px 10px 30px rgba(170, 183, 185, 0.4);
 }
 
+.scale:hover {
+    cursor: pointer;
+    animation: bounce 0.2s;
+    transform: scale(1.05);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.08)
+    }
+    100% {
+        transform: scale(1.05)
+    }
+}
+
+.content-m {
+    margin: 150px 0 !important;
+}
+
 .about::before {
     content: '';
-    width: 430px;
-    height: 20px;
+    margin: -50px -50%;
+    width: 150%;
+    height: 50px;
     position: absolute;
-    /* top: 11%; */
-    /* left: 24%; */
-    background: #000000;
+    transform: rotate(-4deg);
+    background: linear-gradient(to right, #FFEF03, #FF5A00);
+}
+
+.about .position-absolute {
+    transform: rotate(180deg);
+    z-index: -2;
+    margin: 0 -10%;
+}
+
+.contact {
+    background-color: #1d1d1d;
 }
 
 footer {
     width: 100%;
     /* padding: 20px; */
     background-color: #161616;
+}
+
+.gradient-bar {
+    height: 5px;
+    background: linear-gradient(to right, #FFEF03, #FF5A00);
 }
 
 @media screen and (max-width: 1480px) {
